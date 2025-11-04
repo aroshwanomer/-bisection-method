@@ -28,33 +28,11 @@ Repeat until the difference between a and b is very small or f(m) is almost 0.
 📊 Google Sheet	
 Step-by-step Bisection Method table	Open Sheet
 Link : https://docs.google.com/spreadsheets/d/1j2FXFfmwn8kx_FA4JbBRVPS6WUBDG2Jr/edit?usp=sharing&ouid=109008588104628314449&rtpof=true&sd=true
+
 🐍 Google Colab Notebook
 Link : https://colab.research.google.com/drive/1IPVe7Peml5wXMchV5a2xccgDB5VsdL-V?usp=sharing
+
 📝 README.md	Explanation of the project (this file)	—
-🐍 Python Code (Used in Colab) :
-def f(x):
-    return x**3 - x - 2
-
-def bisection(a, b, tol):
-    if f(a) * f(b) >= 0:
-        print("Bisection method fails.")
-        return None
-    while (b - a) / 2.0 > tol:
-        midpoint = (a + b) / 2.0
-        if f(midpoint) == 0:
-            return midpoint
-        elif f(a) * f(midpoint) < 0:
-            b = midpoint
-        else:
-            a = midpoint
-    return (a + b) / 2.0
-
-root = bisection(1, 2, 0.0001)
-print("Approximate root:", root)
-
-
-Output:
-Approximate root: 1.521
 
 
 🏁 Conclusion
