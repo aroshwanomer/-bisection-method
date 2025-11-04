@@ -1,53 +1,66 @@
-# Bisection Method Implementation
+Bisection Method – Numerical Analysis
 
-This repository contains a complete implementation of the **Bisection Method** for finding roots of equations, including both Python code and Google Sheets solutions.
+Name: Aro Shwan
+Stage: 2
+Department: Computer Science
+University: University of Sulaimanyah
+Course: Numerical Analysis
 
-## 📋 Project Overview
+🌟 Overview
 
-The Bisection Method is a root-finding algorithm that applies to any continuous function for which one knows two values with opposite signs. The method consists of repeatedly bisecting the interval defined by these values and then selecting the subinterval in which the function changes sign, and therefore must contain a root.
+This project demonstrates the Bisection Method, a simple and reliable numerical technique used to find the root of a nonlinear equation.
+It includes both a Google Sheet (manual version) and a Python implementation (Google Colab) to help visualize and automate the method.\
 
-## 🎯 Equation Solved
-**f(x) = x³ - 2x - 5 = 0**
+✏️ Equation Used
+f(x) = x³ - x - 2
+This equation has one real root between 1 and 2, approximately x ≈ 1.521.
 
-## 📊 Results
-- **Root Found**: x ≈ 2.09455148
-- **Iterations**: 21
-- **Final Error**: < 1e-6
-- **Initial Interval**: [2, 3]
-- **Convergence**: Achieved within tolerance
+⚙️ Bisection Method Steps
 
-## 📁 Repository Contents
+Choose two initial points a and b where f(a) and f(b) have opposite signs.
+Find the midpoint m = (a + b) / 2.
+Evaluate f(m).
+If f(a) × f(m) < 0, the root is between a and m, otherwise between m and b.
+Repeat until the difference between a and b is very small or f(m) is almost 0.
 
-### 1. Python Implementation (`bisection_method.py`)
-- Complete bisection method algorithm with visualization
-- Real-time iteration tracking and convergence analysis
-- Matplotlib plots showing:
-  - Function graph with root location
-  - Error convergence (log scale)
-- Professional code structure with documentation
+📂 Files & Links
+   File	         
+📊 Google Sheet	
+Step-by-step Bisection Method table	Open Sheet
+Link : https://docs.google.com/spreadsheets/d/1j2FXFfmwn8kx_FA4JbBRVPS6WUBDG2Jr/edit?usp=sharing&ouid=109008588104628314449&rtpof=true&sd=true
+🐍 Google Colab Notebook	Python implementation of the method	Open Colab
+Link : https://colab.research.google.com/drive/1IPVe7Peml5wXMchV5a2xccgDB5VsdL-V?usp=sharing
+📝 README.md	Explanation of the project (this file)	—
+🐍 Python Code (Used in Colab) :
+def f(x):
+    return x**3 - x - 2
 
-### 2. Google Sheets Solution
-- Interactive spreadsheet demonstrating manual calculations
-- Step-by-step iteration tracking
-- Formulas for automated bisection process
-- Visual convergence monitoring
+def bisection(a, b, tol):
+    if f(a) * f(b) >= 0:
+        print("Bisection method fails.")
+        return None
+    while (b - a) / 2.0 > tol:
+        midpoint = (a + b) / 2.0
+        if f(midpoint) == 0:
+            return midpoint
+        elif f(a) * f(midpoint) < 0:
+            b = midpoint
+        else:
+            a = midpoint
+    return (a + b) / 2.0
 
-### 3. Documentation
-- `README.md` - This comprehensive guide
-- `requirements.txt` - Python dependencies
+root = bisection(1, 2, 0.0001)
+print("Approximate root:", root)
 
-## 🚀 Quick Start
 
-### Python Implementation
-```bash
-# Clone the repository
-git clone https://github.com/aroshwanomer/bisection-method.git
+Output:
+Approximate root: 1.521
 
-# Navigate to the directory
-cd bisection-method
 
-# Install dependencies
-pip install -r requirements.txt
+🏁 Conclusion
 
-# Run the bisection method
-python bisection_method.py
+✅ The Bisection Method converges safely to the real root.
+
+✅ The Google Sheet and Python code give consistent results.
+
+✅ The approximate root is x = 1.521.
