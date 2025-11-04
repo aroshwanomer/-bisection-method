@@ -1,9 +1,13 @@
 Bisection Method – Numerical Analysis
 
 Name: Aro Shwan
+
 Stage: 2
+
 Department: Computer Science
+
 University: University of Sulaimanyah
+
 Course: Numerical Analysis
 
 🌟 Overview
