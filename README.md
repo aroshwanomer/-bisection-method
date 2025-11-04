@@ -36,6 +36,9 @@ Link : https://docs.google.com/spreadsheets/d/1j2FXFfmwn8kx_FA4JbBRVPS6WUBDG2Jr/
 🐍 Google Colab Notebook
 Link : https://colab.research.google.com/drive/1IPVe7Peml5wXMchV5a2xccgDB5VsdL-V?usp=sharing
 
+Bisection Method 
+https://drive.google.com/file/d/1daMzbr9ZkmcsIV5BTnDJPvS4dMY60OZ0/view?usp=sharing
+
 📝 README.md	Explanation of the project (this file)	—
 
 
