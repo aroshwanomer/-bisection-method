@@ -28,7 +28,7 @@ Repeat until the difference between a and b is very small or f(m) is almost 0.
 📊 Google Sheet	
 Step-by-step Bisection Method table	Open Sheet
 Link : https://docs.google.com/spreadsheets/d/1j2FXFfmwn8kx_FA4JbBRVPS6WUBDG2Jr/edit?usp=sharing&ouid=109008588104628314449&rtpof=true&sd=true
-🐍 Google Colab Notebook	Python implementation of the method	Open Colab
+🐍 Google Colab Notebook
 Link : https://colab.research.google.com/drive/1IPVe7Peml5wXMchV5a2xccgDB5VsdL-V?usp=sharing
 📝 README.md	Explanation of the project (this file)	—
 🐍 Python Code (Used in Colab) :
